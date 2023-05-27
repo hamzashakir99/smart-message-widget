@@ -1,0 +1,62 @@
+{
+  "name": "smart-message-widget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run prettier && npm run lint",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "test": "jest --config jestconfig.json"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "nextjs",
+    "smart-message",
+    "smart-message-widget"
+  ],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.1",
+    "@types/react": "^18.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^29.5.0",
+    "jest-canvas-mock": "^2.5.1",
+    "jest-environment-jsdom": "^29.5.0",
+    "prettier": "^2.8.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@chatscope/chat-ui-kit-react": "^1.10.1",
+    "@chatscope/chat-ui-kit-styles": "^1.4.0",
+    "axios": "^1.4.0",
+    "socket.io-client": "^4.6.1",
+    "tslib": "^2.5.2"
+  }
+}

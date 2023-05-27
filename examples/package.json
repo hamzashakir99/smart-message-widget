@@ -1,0 +1,11 @@
+{
+    "name": "example",
+    "private": true,
+    "scripts": {
+        "start": "parcel src/index.html"
+    },
+    "version": "0.1.0",
+    "devDependencies": {
+        "parcel": "^2.8.3"
+    }
+}
