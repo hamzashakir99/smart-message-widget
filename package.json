@@ -16,7 +16,7 @@
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run prettier && npm run lint",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
-    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "prettier": "prettier --write \"{src,tests,examples/src}/**/*.{js,ts,jsx,tsx}\"",
     "test": "npm run build && jest --config jestconfig.json"
   },
   "keywords": [
