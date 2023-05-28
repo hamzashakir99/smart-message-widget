@@ -4,6 +4,14 @@
     "trailingComma": "all",
     "tabWidth": 2,
     "semi": false,
+    "overrides": [
+      {
+        "files": "*.test.js",
+        "options": {
+          "semi": true
+        }
+      }
+    ],
     "printWidth": 120,
     "jsxSingleQuote": true,
     "endOfLine": "auto"
