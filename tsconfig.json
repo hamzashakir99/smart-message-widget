@@ -2,7 +2,8 @@
   "include": ["src", "src/message.css"],
   "exclude": [
     "dist",
-    "node_modules"
+    "node_modules",
+    "examples"
   ],
   "compilerOptions": {
     "module": "esnext",
