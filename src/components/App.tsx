@@ -3,7 +3,7 @@ import { IMessageComponentProps, IValidateTokenResponse, IWidgetUseState, ISocke
 import { validateToken, updateUseStateWithPrevious } from '../common'
 import { socket } from '../socket'
 import { ToolIcon, ChatContainerCom } from './index'
-import '../message.css'
+import '../public/styles/message.css'
 const SmartMessage = ({ domain, token, showError }: IMessageComponentProps) => {
   const [widget, setWidget] = useState<IWidgetUseState>({
     display: true,

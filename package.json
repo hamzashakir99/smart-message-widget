@@ -10,14 +10,15 @@
     "url": "git+https://github.com/hamzashakir99/smart-message-widget.git"
   },
   "scripts": {
-    "build": "npm run build:esm && npm run build:cjs",
+    "build": "npm run build:esm && npm run build:cjs && npm run copy-files",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run prettier && npm run lint",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "prettier": "prettier --write \"{src,tests,examples/src}/**/*.{js,ts,jsx,tsx}\"",
-    "test": "npm run build && jest --config jestconfig.json"
+    "test": "npm run build && jest --config jestconfig.json",
+    "copy-files": "cpy ./src/public/**/* ./dist/cjs/public && cpy ./src/public/**/* ./dist/esm/public"
   },
   "keywords": [
     "react",
@@ -42,6 +43,7 @@
     "@types/react": "^18.2.6",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "@typescript-eslint/parser": "^5.59.7",
+    "cpy-cli": "^4.2.0",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
