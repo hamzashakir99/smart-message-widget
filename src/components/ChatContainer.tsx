@@ -17,6 +17,7 @@ import {
 const ChatContainerCom = () => {
   const [chat, setChat] = useState([
     {
+      _id: 0,
       message: 'Hello my friend',
       sentTime: '15 mins ago',
       sender: 'Emily',
@@ -24,6 +25,7 @@ const ChatContainerCom = () => {
       position: 'single',
     },
     {
+      _id: 1,
       message: 'Hello my friend',
       sentTime: '15 mins ago',
       sender: 'localSender',
@@ -31,22 +33,23 @@ const ChatContainerCom = () => {
       position: 'single',
     },
   ])
-  console.log(chat.length)
+  const { Content, Actions } = ConversationHeader
   return (
     <>
       <ChatContainer>
         <ConversationHeader>
           <Avatar src={'emilyIco'} name='Emily' />
-          <ConversationHeader.Content userName='Emily' info='Active 10 mins ago' />
-          <ConversationHeader.Actions>
+          <Content userName='Emily' info='Active 10 mins ago' />
+          <Actions>
             <InfoButton />
-          </ConversationHeader.Actions>
+          </Actions>
         </ConversationHeader>
         <MessageList typingIndicator={<TypingIndicator content='Emily is typing' />}>
           <MessageSeparator content='Saturday, 30 November 2019' />
           {chat.map((item: any) => {
             return item.sender == 'localSender' ? (
               <Message
+                key={item._id}
                 model={{
                   message: item.message,
                   sentTime: item.sentTime,
@@ -57,6 +60,7 @@ const ChatContainerCom = () => {
               />
             ) : (
               <Message
+                key={item._id}
                 model={{
                   message: item.message,
                   sentTime: item.sentTime,
@@ -73,6 +77,7 @@ const ChatContainerCom = () => {
           {chat.map((item: any) => {
             return item.sender == 'localSender' ? (
               <Message
+                key={item._id}
                 model={{
                   message: item.message,
                   sentTime: item.sentTime,
@@ -83,6 +88,7 @@ const ChatContainerCom = () => {
               />
             ) : (
               <Message
+                key={item._id}
                 model={{
                   message: item.message,
                   sentTime: item.sentTime,

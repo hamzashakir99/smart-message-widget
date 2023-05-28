@@ -13,7 +13,7 @@
     "prepublishOnly": "npm test && npm run prettier && npm run lint",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
-    "test": "jest --config jestconfig.json"
+    "test": "npm run build && jest --config jestconfig.json"
   },
   "keywords": [
     "react",
@@ -56,6 +56,7 @@
     "@chatscope/chat-ui-kit-react": "^1.10.1",
     "@chatscope/chat-ui-kit-styles": "^1.4.0",
     "axios": "^1.4.0",
+    "identity-obj-proxy": "^3.0.0",
     "socket.io-client": "^4.6.1",
     "tslib": "^2.5.2"
   }

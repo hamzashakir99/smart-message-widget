@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { IMessageComponentProps, IValidateTokenResponse, IWidgetUseState, ISocketUseState } from '../types/index'
 import { validateToken, updateUseStateWithPrevious } from '../common'
 import { socket } from '../socket'
-import { ToolIcon, ChatContainerCom } from '../index'
+import { ToolIcon, ChatContainerCom } from './index'
 import '../message.css'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css'
 const SmartMessage = ({ domain, token, showError }: IMessageComponentProps) => {

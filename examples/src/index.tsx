@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { SmartMessage } from '../../src/index'
+import { SmartMessage } from 'smart-message-widget'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
