@@ -6,7 +6,7 @@
     "semi": false,
     "overrides": [
       {
-        "files": "*.test.js",
+        "files": "*.js",
         "options": {
           "semi": true
         }
