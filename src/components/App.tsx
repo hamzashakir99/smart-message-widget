@@ -4,7 +4,6 @@ import { validateToken, updateUseStateWithPrevious } from '../common'
 import { socket } from '../socket'
 import { ToolIcon, ChatContainerCom } from './index'
 import '../message.css'
-import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css'
 const SmartMessage = ({ domain, token, showError }: IMessageComponentProps) => {
   const [widget, setWidget] = useState<IWidgetUseState>({
     display: true,

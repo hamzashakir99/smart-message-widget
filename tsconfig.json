@@ -1,5 +1,5 @@
 {
-  "include": ["src"],
+  "include": ["src", "src/message.css"],
   "exclude": [
     "dist",
     "node_modules"
