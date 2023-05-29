@@ -9,6 +9,6 @@
         "parcel": "^2.8.3"
     },
     "dependencies": {
-        "smart-message-widget": "^1.1.0"
+        "smart-message-widget": "^1.1.1"
     }
 }
